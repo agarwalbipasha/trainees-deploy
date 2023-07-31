@@ -14,6 +14,10 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'),
 app.use(morgan('combined', { stream: accessLogStream }));
 
 const db = require("./src/models");
+const { type } = require('os');
+
+console.log(db.url);
+console.log("type is:", typeof db.url);
 
 db.mongoose.connect(db.url, {
   useNewUrlParser: true,

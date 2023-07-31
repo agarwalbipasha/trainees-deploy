@@ -9,4 +9,7 @@ db.mongoose = mongoose;
 db.url = dbConfig;
 db.trainees = require("./trainee")(mongoose);
 
+console.log(typeof db.url);
+
+
 module.exports = db;
