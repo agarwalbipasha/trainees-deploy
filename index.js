@@ -25,7 +25,7 @@ db.mongoose.connect(db.url, {
   process.exit();
 });
 
-require("./src/routes/trainee.routes")(app);
+require("./src/routers/trainee.router")(app);
 
 app.listen(port, () => {
   console.log("Server connected successfully");
